@@ -1,0 +1,23 @@
+# Audited source stays independent from the audit workspace
+/target/
+# Secrets, private environment settings, and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*credentials*.json
+# Build/test artifacts
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.pyc
+.cache/
+out/
+build/
+dist/
+coverage/
+.DS_Store
