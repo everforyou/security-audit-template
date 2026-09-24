@@ -13,9 +13,16 @@ Read `README.md` and `SCOPE.md` at the beginning of each task. This workspace re
 2. Inspect the actual codebase. Determine its language, framework, architecture, entry points, identities/roles, sensitive assets, external dependencies, and security invariants. Write the results to `research/architecture.md`.
 3. Build a small, prioritized queue of **testable** hypotheses in `research/hypotheses.md`. Include prerequisites, attacker capabilities, expected security consequence, and validation method.
 4. Reproduce candidate problems locally and deterministically wherever possible. Keep test code in `poc/`; record precise setup, commands, outputs, traces, and before/after state in `evidence/` (without secrets).
-5. Promote only demonstrated security issues to `findings/`, using `findings/FINDING_TEMPLATE.md`. Keep suspected issues and quality-only observations separately in research.
+5. Promote only demonstrated security issues to `findings/`, using `findings/FINDING_TEMPLATE.md`. Create one dossier folder at `findings/<finding-slug>/`, assign the next permanent ID in `findings/README.md`, and place the copied record in the dossier. Keep suspected issues and quality-only observations separately in research.
 6. Check scope exclusions and documented known issues. When web access or prior-report evidence is unavailable, label duplicate and eligibility checks *pending*, not complete.
 7. End each work session with a concise entry in `research/SESSION_LOG.md`: work performed, tests/results, confirmed findings, open questions, and the next concrete task.
+
+## Finding identity and program tracking
+- Use `findings/README.md` as the authoritative ID, title, finding-status, submission-status, and program-response register.
+- The default ID format is `F-001`, `F-002`, and so on. For a multi-component audit, document a stable project/component format in `README.md` before assigning IDs. Never renumber or reuse an ID.
+- Keep technical finding status separate from whether a report was submitted. Mark a report submitted only when the dossier has evidence of sending; a filename or draft alone is insufficient.
+- Record program responses such as accepted, duplicate, invalid/ineligible, rejected, needs information, or awaiting acknowledgment only from program correspondence. A local duplicate or prior-art assessment is not program feedback.
+- Preserve submission and response dates, references, and evidence paths in the finding dossier. Mark missing or conflicting evidence unverified; do not infer submission or program feedback.
 
 ## Evidence and reporting
 - For a submission-ready report, use `reports/SUBMISSION_TEMPLATE.md`. Include the explicit `## Proof of Concept` section with environment, steps, runnable code/command, expected versus actual result, and sanitized evidence. Do not submit without the user's explicit instruction.

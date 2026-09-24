@@ -1,7 +1,9 @@
 # F-001: [Concise security impact]
 
+Copy this template to `findings/<finding-slug>/FINDING.md`. Replace the example ID with the next ID from `findings/README.md` and keep that ID permanent if the title or folder name changes.
+
 ## Status and severity
-- Status: hypothesis / reproduced / confirmed / submitted / fixed
+- Finding status: reproduced / confirmed / fixed / closed
 - Proposed severity and applicable rubric: TODO
 - Target version / commit: TODO
 
@@ -35,4 +37,16 @@
 ## Disclosure and prior art
 - Program eligibility check: pending
 - Prior audits / duplicate check: pending
-- Submission date / reference: TODO
+
+## Submission tracking
+
+Track submission separately from technical validation. Update the finding register and keep supporting correspondence or receipt in this dossier.
+
+- Submission status: no record / unverified / draft / not submitted / submitted — recorded / submitted — confirmed in dossier
+- Submission date and channel: TODO
+- Submission reference or receipt: TODO
+- Evidence path for sent status: TODO
+- Program response: unknown / no feedback recorded here / awaiting acknowledgment / accepted / duplicate / invalid or ineligible / rejected / needs information / other (quote or summarize the disposition)
+- Response date and evidence path: TODO
+
+Only mark a report submitted when the dossier contains evidence of sending. Record program dispositions from program correspondence. A local duplicate or prior-art assessment is not program feedback. Use `—` in the register when no response applies because the report is only a draft or was not submitted.
