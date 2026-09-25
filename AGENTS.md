@@ -26,6 +26,8 @@ Read `README.md` and `SCOPE.md` at the beginning of each task. This workspace re
 
 ## Evidence and reporting
 - For a submission-ready report, use `reports/SUBMISSION_TEMPLATE.md`. Include the explicit `## Proof of Concept` section with environment, steps, runnable code/command, expected versus actual result, and sanitized evidence. Do not submit without the user's explicit instruction.
+- For email-based reporting, keep one canonical Markdown draft containing recipient and subject metadata plus the complete message body: greeting, short introduction, full report, and sign-off. Use the metadata for the email headers and copy from the greeting through the sign-off into the body. Do not maintain a separate cover-email draft unless the program or user asks for one.
+- Do not attach the report Markdown or include it in an attachment archive. Keep any submission ZIP to the runnable PoC, reproduction instructions, and sanitized evidence; leave internal status notes outside the archive. Follow a program's portal or upload instructions when it explicitly requires a report file.
 - Distinguish observation from interpretation and hypothesis. Cite paths, symbols, line numbers, and exact commit/build version.
 - Describe realistic threat actors, permissions, required environmental conditions, exploit sequence, and specific technical impact. Do not manufacture a Critical/High rating; use the engagement's rubric when provided.
 - A failing test is not automatically a security vulnerability. Establish that it violates a meaningful security boundary or property.

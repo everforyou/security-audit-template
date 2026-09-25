@@ -34,6 +34,6 @@ A standalone Codex workspace for **one** authorized security audit. Supported ta
 - `poc/` — isolated reproduction and test harnesses
 - `scripts/` — auxiliary analysis scripts
 - `evidence/` — sanitized traces, logs, and screenshots
+- `reports/` — copy-ready email/report template with an explicit Proof of Concept section; copy its message body into the email and attach PoC/evidence separately, not the report Markdown
 
 **Confidentiality:** keep per-target audit repos private unless public release is approved; the reusable template itself can be public.
-- `reports/` — standalone, submission-ready vulnerability report template with an explicit Proof of Concept section

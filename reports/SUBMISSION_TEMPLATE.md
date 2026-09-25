@@ -1,3 +1,12 @@
+To: [Private reporting address]
+Subject: Private security report: [Concise vulnerability title]
+
+Use these values for the email headers. Copy from the greeting through the sign-off into the email body; do not attach this Markdown file.
+
+Hello [Security Team],
+
+I’m reporting [concise description of the vulnerability] in [project and tested version]. The attached archive contains the reproduction and sanitized evidence. The full report follows.
+
 # [Vulnerability title]
 
 ## Summary
@@ -57,4 +66,6 @@ TODO
 
 ## Prior art and disclosure notes
 - Related known issues / prior audits: [Results or pending]
-- Submission date and reference: [Complete after submission]
+
+Regards,
+[Researcher name]
