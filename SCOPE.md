@@ -23,15 +23,6 @@
 - Explicitly excluded components and vulnerabilities: TODO
 - Known accepted risks or public issues: TODO
 
-## Testing permissions — assume NO until documented
-- Source review and local reproduction: TODO
-- Staging / dedicated test environment: TODO
-- Production testing: NO unless explicitly permitted
-- Automated scanning / load testing: NO unless explicitly permitted
-- Third-party systems or accounts: NO unless explicitly permitted
-- Credentialed / user-data testing: NO unless explicitly permitted
-- Resource and rate limits: TODO
-
 ## Prior work
 - Relevant audit reports and advisories (with date): TODO
 - Existing issue tracker and known mitigations: TODO
