@@ -1,0 +1,47 @@
+schema_version: 1
+run_id: "YYYYMMDDTHHMMSSZ-01"
+created_at_utc: "YYYY-MM-DDTHH:MM:SSZ"
+
+hypothesis_id: "H-001"
+
+target:
+  version_or_commit: "TODO"
+  artifact_digest: null # Add a digest when the target is an image/package/artifact.
+
+authorization:
+  scope_row: "TODO — exact row from SCOPE.md"
+  written_reference: "TODO — reference/date, no credentials"
+  applicable_limits: "TODO"
+
+environment:
+  type: "TODO — local, isolated lab, staging, or explicitly authorized production"
+  asset_reference: "TODO — exact authorized asset or SCOPE.md alias; no secrets"
+  identity_roles: ["TODO — role labels only"]
+
+test:
+  execution_status: "prepared" # Afterward use completed, interrupted, or not_run.
+  poc_path: "poc/H-001/"
+  poc_revision_or_hash: "TODO — commit SHA or digest of all exact PoC/fixture files used"
+  case_id: "TODO"
+  working_directory: "TODO"
+  commands_and_actions: ["TODO — exact command/action; redact secret values"]
+  environment_variable_names: ["TODO — names only, never values"]
+  fixture_refs: ["TODO — synthetic fixture paths/IDs only"]
+  tool_and_runtime_versions: ["TODO"]
+  expected_result: "TODO"
+  observed_result: "TODO"
+  exit_status: null # Fill in when the run has a process exit status.
+  state_before_after: "TODO — if relevant"
+  interpretation: "TODO — what this run establishes and what it does not establish"
+
+artifacts:
+  - path: "stdout.txt"
+    sha256: "TODO"
+    sanitized: "TODO — mark true only after reviewing the artifact"
+  # Add one entry per saved output. Paths are relative to this manifest.
+
+cleanup:
+  completed: "TODO"
+  details: "TODO — state restored and temporary assets removed, or explain remaining state"
+
+next_action: "TODO"

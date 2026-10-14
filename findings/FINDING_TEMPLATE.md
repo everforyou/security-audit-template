@@ -22,11 +22,13 @@ Copy this template to `findings/<finding-slug>/FINDING.md`. Replace the example 
 
 ## Reproduction
 - Isolated setup and environment: TODO
-- PoC path: `poc/TODO`
-- Exact commands and inputs: TODO
+- Related hypothesis ID(s): TODO
+- PoC instructions and code: `poc/H-###/README.md` and related files
+- Run manifest(s): `evidence/H-###/runs/<run-id>/manifest.yaml`
+- Exact commands and inputs: summarize the approved reproduction steps here; the run manifest is the canonical record for the tested command, version, and environment.
 - Expected result: TODO
 - Actual observed result: TODO
-- Sanitized evidence: `evidence/TODO`
+- Sanitized evidence artifacts: link paths listed in the run manifest(s)
 
 ## Security impact
 [Concrete consequence, affected assets/users, limitations, and any measured bound.]

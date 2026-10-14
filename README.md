@@ -13,11 +13,11 @@ A standalone Codex workspace for **one** authorized security audit. Supported ta
 - Researcher: TODO
 
 ## Getting started
-1. Populate `SCOPE.md` with authorization, version, assets, permitted testing, and exclusions.
+1. Populate `SCOPE.md` with authorization, exact assets, environments, identities, permitted test methods, limits, stop conditions, and exclusions. Use its testing matrix to document the broadest written authorization available without inferring permission.
 2. Place a checkout or supplied test artifact under `target/` (ignored by this template's Git history).
 3. Record actual setup/build/test commands below after inspecting the target.
 4. Open this project root in Codex and ask it to read `AGENTS.md`, `README.md`, and `SCOPE.md`.
-5. Keep hypotheses in `research/`, independently validated vulnerabilities in `findings/`, tests in `poc/`, and sanitized evidence in `evidence/`. For each validated finding, create `findings/<finding-slug>/`, copy [`findings/FINDING_TEMPLATE.md`](findings/FINDING_TEMPLATE.md) there as `FINDING.md`, assign the next permanent ID in [`findings/README.md`](findings/README.md), and keep its technical, submission, and program-response statuses current there.
+5. Keep hypotheses in `research/`, independently validated vulnerabilities in `findings/`, hypothesis-specific test code in `poc/H-###/`, and sanitized per-run evidence in `evidence/H-###/runs/<UTC-run-id>/`. Use `scripts/new-evidence-run.sh H-###` to prepare a unique run folder and manifest for every material attempt; link the manifest from the hypothesis record. Keep summaries concise and link to the canonical run record instead of duplicating logs. For each validated finding, create `findings/<finding-slug>/`, copy [`findings/FINDING_TEMPLATE.md`](findings/FINDING_TEMPLATE.md) there as `FINDING.md`, assign the next permanent ID in [`findings/README.md`](findings/README.md), and link the relevant hypothesis IDs, PoC instructions, and run manifests. Keep technical, submission, and program-response statuses current in the register. Maintain reusable cross-hunt methods in a separate location outside this one-target workspace; only reuse sanitized, target-independent material after checking disclosure terms.
 
 ## Commands
 ```sh
@@ -33,9 +33,9 @@ A standalone Codex workspace for **one** authorized security audit. Supported ta
 - `target/` — locally obtained baseline; not committed
 - `research/` — architecture, hypotheses, prior work, session log
 - `findings/` — demonstrated and documented security findings; `findings/README.md` is the permanent ID, title, submission, and program-response register
-- `poc/` — isolated reproduction and test harnesses
+- `poc/` — isolated reproduction code and setup instructions, grouped by hypothesis ID, with target-specific shared helpers in `poc/shared/`
 - `scripts/` — auxiliary analysis scripts
-- `evidence/` — sanitized traces, logs, and screenshots
+- `evidence/` — sanitized, immutable run records, manifests, traces, logs, and screenshots, grouped by hypothesis ID
 - `reports/` — copy-ready email/report template with an explicit Proof of Concept section; copy its message body into the email and attach PoC/evidence separately, not the report Markdown
 
 **Confidentiality:** keep per-target audit repos private unless public release is approved; the reusable template itself can be public.

@@ -28,6 +28,8 @@ I’m reporting [concise description of the vulnerability] in [project and teste
 
 ## Proof of Concept
 
+Use the selected internal run manifest as the source for exact versions, commands, and observed results. Transfer only details and sanitized artifacts appropriate for the authorized submission; the internal manifest may contain audit-only scope references and is not a default attachment.
+
 ### Environment and setup
 - System and tool versions: [OS, runtime, dependencies, testing framework]
 - Target version / commit: [Exact identifier]
