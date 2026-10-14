@@ -24,7 +24,18 @@ I’m reporting [concise description of the vulnerability] in [project and teste
 - Prerequisites and limitations: [Attacker access, privileges, required target state, environment]
 
 ## Root cause
-[Explain the precise implementation flaw and why existing safeguards do not prevent it. Reference exact source locations.]
+[Explain the precise implementation flaw and why existing safeguards do not prevent it.]
+
+### Relevant source excerpt
+Source: [File path and line numbers], [function / symbol], tested version [commit / release].
+
+```language
+// Include the shortest relevant excerpt that demonstrates the root cause.
+...
+```
+
+### Explanation
+[Walk through the excerpt's relevant data or control flow: identify the missing or incorrect check, explain why existing safeguards do not prevent the behavior, and connect the flaw to the demonstrated security impact. Keep the excerpt minimal. If program rules prohibit reproducing source code, include minimal pseudocode and the exact source reference instead.]
 
 ## Proof of Concept
 

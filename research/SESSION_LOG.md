@@ -55,3 +55,12 @@ For each session, list the hypothesis IDs investigated, evidence-backed disposit
 - Confirmed facts: Finding authorship is selected per finding and may vary across contributors.
 - Open hypotheses / blockers (IDs / next action): Target-specific audit remains pending a completed authorization matrix and authorized target/version.
 - Next concrete task: For an engagement, complete `SCOPE.md`, provide the authorized target, and inspect its version and architecture before recording evidence-based hypotheses.
+
+## 2026-10-14 — Submission root-cause code excerpt
+- Target version checked: Not applicable; `target/` is empty and `SCOPE.md` is unfilled.
+- Work performed: Updated the submission template's root-cause section to include a short, referenced source-code excerpt followed by an explanation of the relevant checks, control flow, and demonstrated impact.
+- Hypotheses investigated and disposition (IDs / evidence): None; no authorized audit target is configured.
+- Commands and results: Documentation-only update; no target tests run.
+- Confirmed facts: The report template now asks for both code evidence and a clear explanation; it also allows minimal pseudocode when program rules prohibit reproducing source.
+- Open hypotheses / blockers (IDs / next action): Target-specific audit remains pending a completed authorization matrix and authorized target/version.
+- Next concrete task: For an engagement, complete `SCOPE.md`, provide the authorized target, and inspect its version and architecture before recording evidence-based hypotheses.
