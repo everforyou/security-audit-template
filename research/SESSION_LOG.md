@@ -37,3 +37,12 @@ For each session, list the hypothesis IDs investigated, evidence-backed disposit
 - Confirmed facts: Run manifests record the target revision, permission basis, environment, PoC revision/hash, command, results, artifacts, cleanup, and next action. The helper only creates a folder and manifest; it does not contact a target. Cross-engagement reuse is directed outside this one-target workspace.
 - Open hypotheses / blockers (IDs / next action): Target-specific audit remains pending a completed authorization matrix and authorized target/version.
 - Next concrete task: For each target hypothesis, copy the PoC README template and create one new evidence run folder/manifest per validation attempt.
+
+## 2026-10-14 — Finding author identity
+- Target version checked: Not applicable; `target/` is empty and `SCOPE.md` is unfilled.
+- Work performed: Added the GitHub username as the finding author in the finding dossier template and added an author column and convention to the finding register.
+- Hypotheses investigated and disposition (IDs / evidence): None; no authorized audit target is configured.
+- Commands and results: Documentation-only update; no target tests run.
+- Confirmed facts: The active GitHub username is `everforyou`.
+- Open hypotheses / blockers (IDs / next action): Target-specific audit remains pending a completed authorization matrix and authorized target/version.
+- Next concrete task: For an engagement, complete `SCOPE.md`, provide the authorized target, and inspect its version and architecture before recording evidence-based hypotheses.
