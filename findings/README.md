@@ -2,7 +2,7 @@
 
 This is the authoritative index for validated finding dossiers under `findings/`. Keep one permanent ID and current status row per finding. Store each record at `findings/<finding-slug>/FINDING.md`. Keep hypotheses and unvalidated leads in `research/` until evidence demonstrates a security boundary violation.
 
-Use the author's GitHub username (account login), not their display name, in each dossier and the register. The current default author is `everforyou`; list each GitHub username for co-authored findings.
+Use each finding author's GitHub username (account login), not their display name, in the dossier and register. Fill the author field with the actual contributor's login for that finding; do not hardcode an individual username in this reusable template. For co-authored findings, list each author's GitHub username.
 
 **ID format:** The default is `F-001`, `F-002`, and so on. For a multi-component audit, document the project/component ID format in the project README before assigning IDs. Never renumber or reuse an ID, even if a finding is closed or merged.
 

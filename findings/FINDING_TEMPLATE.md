@@ -2,7 +2,7 @@
 
 Copy this template to `findings/<finding-slug>/FINDING.md`. Replace the example ID with the next ID from `findings/README.md` and keep that ID permanent if the title or folder name changes.
 
-- Author (GitHub username): everforyou
+- Author (GitHub username): [author's GitHub login]
 
 ## Status and severity
 - Finding status: reproduced / confirmed / fixed / closed

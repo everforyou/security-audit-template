@@ -46,3 +46,12 @@ For each session, list the hypothesis IDs investigated, evidence-backed disposit
 - Confirmed facts: The active GitHub username is `everforyou`.
 - Open hypotheses / blockers (IDs / next action): Target-specific audit remains pending a completed authorization matrix and authorized target/version.
 - Next concrete task: For an engagement, complete `SCOPE.md`, provide the authorized target, and inspect its version and architecture before recording evidence-based hypotheses.
+
+## 2026-10-14 — Finding author placeholder correction
+- Target version checked: Not applicable; `target/` is empty and `SCOPE.md` is unfilled.
+- Work performed: Removed the hardcoded username from the reusable finding template; the author field now calls for the actual author's GitHub login for each finding.
+- Hypotheses investigated and disposition (IDs / evidence): None; no authorized audit target is configured.
+- Commands and results: Documentation-only correction; no target tests run.
+- Confirmed facts: Finding authorship is selected per finding and may vary across contributors.
+- Open hypotheses / blockers (IDs / next action): Target-specific audit remains pending a completed authorization matrix and authorized target/version.
+- Next concrete task: For an engagement, complete `SCOPE.md`, provide the authorized target, and inspect its version and architecture before recording evidence-based hypotheses.
