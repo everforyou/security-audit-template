@@ -4,7 +4,8 @@ A standalone Codex workspace for **one** authorized security audit. Supported ta
 
 ## Target metadata
 - Project / vendor: TODO
-- Launch date: TODO
+- First Program Launch date: TODO
+- Recent Program Launch date: TODO
 - Reward range: TODO
 - Target repository or artifact: TODO
 - Exact commit, release, image digest, or deployed version: TODO
