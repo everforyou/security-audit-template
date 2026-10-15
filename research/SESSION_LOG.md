@@ -73,3 +73,12 @@ For each session, list the hypothesis IDs investigated, evidence-backed disposit
 - Confirmed facts: An incident pattern is a source of hypotheses, not evidence that the audited target is vulnerable.
 - Open hypotheses / blockers (IDs / next action): A concrete incident survey requires a configured blockchain target, architecture, and exact version.
 - Next concrete task: When a blockchain target is configured, identify comparable protocols and survey recent incidents before finalizing code-grounded hypotheses.
+
+## 2026-10-15 — Production read-only scope
+- Target version checked: Not applicable; `target/` is empty and `SCOPE.md` is unfilled.
+- Work performed: Separated production read-only queries from production mutations. The scope now prompts for maximum bounded reads only when exact assets, methods, identities, data limits, and written authorization are recorded; production writes and persistent state changes are prohibited.
+- Hypotheses investigated and disposition (IDs / evidence): None; no authorized audit target is configured.
+- Commands and results: Documentation-only update; no target tests run.
+- Confirmed facts: Read-only production permission does not authorize writes, transactions, access to real user data, or unlisted third-party services.
+- Open hypotheses / blockers (IDs / next action): Target-specific production read permissions and limits remain unconfigured in `SCOPE.md`.
+- Next concrete task: For an engagement, record exact read-only assets/methods and limits; conduct write/state-change validation only in authorized non-production environments.

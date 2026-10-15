@@ -14,7 +14,7 @@ authorization:
   applicable_limits: "TODO"
 
 environment:
-  type: "TODO — local, isolated lab, staging, or explicitly authorized production"
+  type: "TODO — local, isolated lab, staging, or explicitly authorized production read-only"
   asset_reference: "TODO — exact authorized asset or SCOPE.md alias; no secrets"
   identity_roles: ["TODO — role labels only"]
 

@@ -69,7 +69,8 @@ TODO
 ### Evidence and repeatability
 - Attached sanitized evidence: [Filenames, log excerpts, traces, screenshots as applicable]
 - Repeatability: [e.g., successful in N/N clean local runs; state if not verified]
-- Production testing: [Not performed / explicitly authorized and documented]
+- Production read-only validation: [Not performed / explicitly authorized and documented]
+- Production writes or persistent state changes: Not performed
 
 ## Exploit scenario
 [Describe the realistic attack sequence and connect each step to demonstrated evidence. Clearly label any untested extrapolations.]
