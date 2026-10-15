@@ -12,6 +12,14 @@ A standalone Codex workspace for **one** authorized security audit. Supported ta
 - Authorization / engagement: TODO
 - Researcher: TODO
 
+## Template version and distribution
+
+The root [`VERSION`](VERSION) file identifies this reusable template, not the audited target; the target's exact version belongs in `SCOPE.md`. Track notable template changes in [`CHANGELOG.md`](CHANGELOG.md).
+
+Use semantic versions in `MAJOR.MINOR.PATCH` form. While the major version is `0`, minor releases may change the workflow or file structure; patch releases contain corrections that do not change the workflow. Once the template reaches `1.0.0`, use major releases for incompatible workflow or format changes, minor releases for backward-compatible additions, and patch releases for corrections.
+
+Distribute snapshots from version tags named `vMAJOR.MINOR.PATCH` and do not move a published tag. When creating a target-specific audit workspace, record the template tag or source commit in that workspace so its starting point can be identified. Do not bump the template version for changes confined to a target-specific audit workspace.
+
 ## Getting started
 1. Populate `SCOPE.md` with authorization, exact assets, environments, identities, permitted test methods, limits, stop conditions, and exclusions. Use its testing matrix to document the broadest written authorization available without inferring permission.
 2. Place a checkout or supplied test artifact under `target/` (ignored by this template's Git history).

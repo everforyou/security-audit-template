@@ -82,3 +82,12 @@ For each session, list the hypothesis IDs investigated, evidence-backed disposit
 - Confirmed facts: Read-only production permission does not authorize writes, transactions, access to real user data, or unlisted third-party services.
 - Open hypotheses / blockers (IDs / next action): Target-specific production read permissions and limits remain unconfigured in `SCOPE.md`.
 - Next concrete task: For an engagement, record exact read-only assets/methods and limits; conduct write/state-change validation only in authorized non-production environments.
+
+## 2026-10-15 — Template version management
+- Target version checked: Not applicable; this is a reusable template project, and `target/` is empty.
+- Work performed: Added a semantic template version, changelog, and distribution guidance that distinguishes template releases from target versions and target-specific audit changes.
+- Hypotheses investigated and disposition (IDs / evidence): None; no authorized audit target is configured.
+- Commands and results: Documentation-only update; no target tests run.
+- Confirmed facts: No prior version file or Git release tags existed; the initial tracked baseline is `0.1.0`.
+- Open questions: None for the versioning scheme; use `v0.1.0` to identify this initial versioned distribution snapshot.
+- Next concrete task: For the next distributed template snapshot, update `VERSION` and `CHANGELOG.md`, then publish a matching immutable `vMAJOR.MINOR.PATCH` tag.
