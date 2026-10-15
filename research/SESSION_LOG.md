@@ -64,3 +64,12 @@ For each session, list the hypothesis IDs investigated, evidence-backed disposit
 - Confirmed facts: The report template now asks for both code evidence and a clear explanation; it also allows minimal pseudocode when program rules prohibit reproducing source.
 - Open hypotheses / blockers (IDs / next action): Target-specific audit remains pending a completed authorization matrix and authorized target/version.
 - Next concrete task: For an engagement, complete `SCOPE.md`, provide the authorized target, and inspect its version and architecture before recording evidence-based hypotheses.
+
+## 2026-10-15 — Recent incident-informed research
+- Target version checked: Not applicable; `target/` is empty and `SCOPE.md` is unfilled.
+- Work performed: Added a blockchain-specific workflow to prioritize comparable fund-loss incidents whose exploits occurred within the three years before an audit, with older incidents retained when mechanisms remain relevant. Added a structured incident record that separates reported severity from loss evidence and requires mapping to target code before deriving hypotheses.
+- Hypotheses investigated and disposition (IDs / evidence): None; no authorized audit target is configured.
+- Commands and results: Documentation-only update; no target tests or incident survey run.
+- Confirmed facts: An incident pattern is a source of hypotheses, not evidence that the audited target is vulnerable.
+- Open hypotheses / blockers (IDs / next action): A concrete incident survey requires a configured blockchain target, architecture, and exact version.
+- Next concrete task: When a blockchain target is configured, identify comparable protocols and survey recent incidents before finalizing code-grounded hypotheses.

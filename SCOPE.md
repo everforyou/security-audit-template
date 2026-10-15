@@ -58,5 +58,5 @@ For thorough coverage, explicitly identify the attacker roles to simulate (such 
 If authorization or a limit is missing, do not perform that activity. Record the gap and continue with independent activities explicitly allowed above. Do not test against live users or retrieve or retain real user data. Demonstrate impact with the least data and state change necessary, using synthetic test assets and an approved destination wherever possible. Persistence and export-path tests require explicit permission and cleanup/stop conditions in their rows.
 
 ## Prior work
-- Relevant audit reports and advisories (with date): TODO
+- Relevant audit reports, advisories, and comparable-incident research (with source/date): TODO
 - Existing issue tracker and known mitigations: TODO

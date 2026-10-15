@@ -31,7 +31,7 @@ A standalone Codex workspace for **one** authorized security audit. Supported ta
 - `AGENTS.md` — Codex instructions for this audit
 - `SCOPE.md` — rules, authorization, exact version, assets, exclusions
 - `target/` — locally obtained baseline; not committed
-- `research/` — architecture, hypotheses, prior work, session log
+- `research/` — architecture, hypotheses, incident-informed public research, prior work, session log
 - `findings/` — demonstrated and documented security findings; `findings/README.md` is the permanent ID, title, submission, and program-response register
 - `poc/` — isolated reproduction code and setup instructions, grouped by hypothesis ID, with target-specific shared helpers in `poc/shared/`
 - `scripts/` — auxiliary analysis scripts
