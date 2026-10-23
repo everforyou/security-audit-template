@@ -29,6 +29,15 @@ For each session, list the hypothesis IDs investigated, evidence-backed disposit
 - Open questions: Target-specific bounty rules, prior art, exact test environments, and required test conditions are unknown until an engagement is configured; those checks must remain pending then.
 - Next concrete task: On an audit, capture current official program rules and exceptions, inventory all attack surfaces and available environments, seed the uncapped candidate queue, and execute every material coverage-plan case within the non-production default and program limits.
 
+## 2026-10-22 — Final template consistency review
+- Target version checked: Not applicable; this is a reusable template project, and `target/` is not configured for an audit.
+- Work performed: Rechecked scope defaults and linked research, finding, PoC, and evidence templates. Separated novelty from eligibility, clarified evidence-oriented coverage-case statuses, required every inventoried attack surface to map to a candidate or a documented rationale, and stated that the engagement owner's default does not add assets to program scope.
+- Hypotheses investigated and disposition (IDs / evidence): None; no authorized audit target is configured.
+- Commands and results: Documentation review and `git diff --check`; no target tests run.
+- Confirmed facts: The prior case statuses could be confused with test-run outcomes, and the combined novelty/eligibility screen could hide distinct judgments.
+- Open questions: Target-specific program rules, prior art, and test conditions remain unconfigured and must be checked for each engagement.
+- Next concrete task: For an audit, identify the named in-scope target, verify current program rules, map all material attack surfaces, and investigate each coverage case under the recorded non-production default and explicit limits.
+
 ## 2026-10-13 — Template workflow review
 - Target version checked: Not applicable; `target/` is empty and `SCOPE.md` is unfilled.
 - Work performed: Reviewed the audit workflow and strengthened hypothesis quality, investigation, evidence, and disposition requirements.

@@ -43,13 +43,14 @@ Copy this template to `findings/<finding-slug>/FINDING.md`. Replace the example 
 - Exact in-scope asset and affected version: TODO
 - Eligible impact and applicable severity criteria: TODO
 - Required proof, report format, and submission instructions verified: TODO
+- Eligibility screen: pending / eligible / ineligible / unclear
 - Public prior-art sources/search terms, dates, results, and links: TODO
 - Same-target local comparison (`findings/`, hypotheses, prior reports/drafts) and links: TODO
 - Possible overlap and material differences in root cause, version, preconditions, or impact: TODO
-- Researcher screen: pending / no match found / possible overlap / known or ineligible / unclear
+- Novelty screen: pending / no match found / possible overlap / known or accepted issue / unclear
 - Recheck date before submission: TODO
 
-`No match found` is a documented search result, not proof of uniqueness or program acceptance. Record program eligibility decisions only when supported by program correspondence; keep local assessments separate from program responses.
+`No match found` is a documented search result, not proof of uniqueness or program acceptance. Eligibility and novelty are separate researcher assessments; record official program decisions only when supported by program correspondence.
 
 ## Submission tracking
 

@@ -10,7 +10,7 @@
 
 ## Attack-surface and test-condition inventory
 
-Inventory material components and reachable operations before finalizing the hypothesis queue. Link each item to the source/configuration and relevant hypothesis IDs; explain any unreviewed area.
+Inventory material components and reachable operations before finalizing the hypothesis queue. Link each item to source/configuration and at least one hypothesis ID, or document why inspection found no concrete security hypothesis for it. Do not leave material components unreviewed; record each remaining gap with its next action.
 
 | Component / operation | Entry point and attacker-controlled inputs | Roles and trust boundary | Sensitive asset / invariant | Relevant state, configuration, or version conditions | Available test environments and exact setup | Candidate IDs / open gap |
 |---|---|---|---|---|---|---|
