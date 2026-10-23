@@ -2,6 +2,15 @@
 
 For each session, list the hypothesis IDs investigated, evidence-backed disposition, and canonical run-manifest paths. Carry unresolved candidates forward with the next concrete action; do not report an unexplained “skipped” or replace them with new candidates. Summarize results here; keep full outputs in the evidence run folders.
 
+## 2026-10-22 — Local reproduction authorization baseline
+- Target version checked: Not applicable; this is a reusable template project, and `target/` is not configured for an audit.
+- Work performed: Updated the scope defaults to allow broad local-only reproduction, including local forks/private testnets, local state changes, synthetic roles, fuzzing, and exploit chains. Separated those activities from remote testnets, RPC providers, third-party services, production reads, and production writes.
+- Hypotheses investigated and disposition (IDs / evidence): None; no authorized audit target is configured.
+- Commands and results: Documentation review only; no target tests run.
+- Confirmed facts: The previous matrix left local testing and state-changing reproduction unclear or prohibited unless separately permitted, which blocked isolated local PoCs despite no remote interaction.
+- Open questions: For each real engagement, exact remote deployments, service terms, limits, and authorization still need to be recorded; production writes remain prohibited.
+- Next concrete task: On an audit, identify which reproduction paths are fully local and document any remote fork data sources, shared testnets, or services separately in `SCOPE.md`.
+
 ## 2026-10-13 — Template workflow review
 - Target version checked: Not applicable; `target/` is empty and `SCOPE.md` is unfilled.
 - Work performed: Reviewed the audit workflow and strengthened hypothesis quality, investigation, evidence, and disposition requirements.
