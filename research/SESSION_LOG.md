@@ -11,6 +11,15 @@ For each session, list the hypothesis IDs investigated, evidence-backed disposit
 - Open questions: For each real engagement, exact remote deployments, service terms, limits, and authorization still need to be recorded; production writes remain prohibited.
 - Next concrete task: On an audit, identify which reproduction paths are fully local and document any remote fork data sources, shared testnets, or services separately in `SCOPE.md`.
 
+## 2026-10-22 — Simplify remote authorization capture
+- Target version checked: Not applicable; this is a reusable template project, and `target/` is not configured for an audit.
+- Work performed: Removed the per-activity authorization matrix and replaced it with a concise written-scope summary for remote assets, methods, identities, providers, limits, test windows, and stop/cleanup requirements. Updated the README and agent workflow to match.
+- Hypotheses investigated and disposition (IDs / evidence): None; no authorized audit target is configured.
+- Commands and results: Documentation review only; no target tests run.
+- Confirmed facts: The matrix duplicated scope details and could make allowed local reproduction appear conditional; the replacement keeps remote authorization boundaries explicit without requiring repetitive status rows.
+- Open questions: Engagement-specific remote authorization remains to be recorded for each real target; production writes remain prohibited.
+- Next concrete task: For an audit, fill the concise remote scope summary from the actual written authorization and continue with local-only reproduction by default.
+
 ## 2026-10-13 — Template workflow review
 - Target version checked: Not applicable; `target/` is empty and `SCOPE.md` is unfilled.
 - Work performed: Reviewed the audit workflow and strengthened hypothesis quality, investigation, evidence, and disposition requirements.

@@ -7,6 +7,7 @@ Record notable changes to the reusable template. Target-specific audit results b
 ### Changed
 - Allow broad reproduction in isolated local environments by default, including local fork/private testnet state changes, synthetic role tests, fuzzing, and exploit chains; keep shared testnets, remote services, and production reads separately scoped.
 - Clarify that production writes remain prohibited and that a local fork using a remote RPC provider involves separately scoped remote access.
+- Replace the per-activity testing authorization matrix with a concise remote scope summary that captures exact assets, methods, identities, limits, and stop conditions.
 
 ## 0.1.0 — 2026-10-15
 
