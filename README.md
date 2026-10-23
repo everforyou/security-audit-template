@@ -22,7 +22,7 @@ Use semantic versions in `MAJOR.MINOR.PATCH` form. While the major version is `0
 Distribute snapshots from version tags named `vMAJOR.MINOR.PATCH` and do not move a published tag. When creating a target-specific audit workspace, record the template tag or source commit in that workspace so its starting point can be identified. Do not bump the template version for changes confined to a target-specific audit workspace.
 
 ## Getting started
-1. Summarize the written authorization, exact remote assets, environments, identities, methods, limits, stop conditions, and exclusions in `SCOPE.md`. The template allows isolated local reproduction by default, including offline local forks, private local testnets, synthetic roles, and local state changes. Public/shared testnets and remote services still need exact scope and authorization; production writes remain prohibited.
+1. Check current program rules, bounty eligibility and proof requirements, target identity/version, exclusions, special limits, and stop conditions in `SCOPE.md`. The template authorizes non-production testing of the in-scope target by default, including RPC-backed forks, public/shared target testnets, test/staging deployments, role tests, fuzzing, exploit chains, and state changes. Do not add per-method or per-case permission gates. Production writes remain prohibited; production read-only access needs explicit authorization.
 2. Place a checkout or supplied test artifact under `target/` (ignored by this template's Git history).
 3. If authorized tools need credentials, copy `.env.example` to `.env` and fill only the variables those tools use. Keep target-specific credentials within this engagement; use shared audit-tool credentials only where the service terms and `SCOPE.md` allow. Never commit `.env` or include credentials in evidence or logs. Possessing a credential does not grant permission beyond `SCOPE.md`.
 4. Record actual setup/build/test commands below after inspecting the target.
@@ -42,7 +42,7 @@ Distribute snapshots from version tags named `vMAJOR.MINOR.PATCH` and do not mov
 - `SCOPE.md` — rules, authorization, exact version, assets, exclusions
 - `.env.example` — optional credential-variable names; keep real values in the ignored local `.env`
 - `target/` — locally obtained baseline; not committed
-- `research/` — architecture, hypotheses, incident-informed public research, prior work, session log
+- `research/` — architecture and attack-surface coverage, hypotheses, program eligibility/duplicate checks, incident-informed public research, prior work, session log
 - `findings/` — demonstrated and documented security findings; `findings/README.md` is the permanent ID, title, submission, and program-response register
 - `poc/` — isolated reproduction code and setup instructions, grouped by hypothesis ID, with target-specific shared helpers in `poc/shared/`
 - `scripts/` — auxiliary analysis scripts

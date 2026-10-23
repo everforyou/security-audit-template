@@ -7,6 +7,7 @@
 - Submission and disclosure channel: TODO
 - Embargo / confidentiality rules: TODO
 - Severity rubric: TODO
+- Program eligibility, known-issue, and minimum proof/report requirements: TODO
 
 ## Exact target version
 - Repository / package / image / artifact URL: TODO
@@ -25,28 +26,25 @@
 
 ## Local-only testing baseline
 
-This template explicitly allows research that stays entirely inside the researcher's isolated, researcher-controlled local environment, using source or artifacts the researcher is authorized to review. This includes source/configuration/dependency review; local builds and tests; emulators, offline forks, and private local testnets; synthetic local identities and data; local role-boundary checks; fuzzing and exploit-chain reproduction; and state changes, callbacks, or persistence confined to a disposable local copy. Local resource testing is allowed against isolated local processes with a per-run resource cap and stop condition. Keep the audited baseline under `target/` unchanged; put experiments in `poc/` or `scripts/`.
+This template explicitly allows research that stays entirely inside the researcher's isolated, researcher-controlled local environment, using source or artifacts the researcher is authorized to review and test. This includes source/configuration/dependency review; local builds and tests; emulators, offline forks, and private local testnets; synthetic local identities and data; local role-boundary checks; fuzzing and exploit-chain reproduction; and state changes, callbacks, or persistence confined to a disposable local copy. Local resource testing is allowed against isolated local processes with a per-run resource cap and stop condition. A specific written engagement restriction on local use takes precedence; otherwise, do not add extra per-test permission gates. Keep the audited baseline under `target/` unchanged; put experiments in `poc/` or `scripts/`.
 
-This baseline does not authorize network activity. A local fork that fetches state from an RPC provider makes remote requests; a public/shared testnet is a remote deployment even though it is not production. Record the applicable provider/deployment, methods, and limits in the authorization section below before contacting them. A target-owned or engagement-designated testnet may be used for state-changing reproduction when the written authorization includes that deployment and method. Production writes, transactions, and persistent state changes remain prohibited.
+The default authorization for this template also covers non-production testing of the in-scope target, including RPC-backed forks, the target's public/shared testnets, and target-owned test/staging deployments. This includes state-changing reproduction, role and boundary testing, fuzzing, and exploit chains on those non-production environments. Do not require a separate permission entry for each test method or case. Use public target data and synthetic test assets; respect published provider terms and rate limits. Testing a third-party service or asset as a target still requires its own authorization. Any explicit program exclusion, test limit, or stop condition takes precedence and blocks only the affected activity. Production writes, transactions, and persistent state changes remain prohibited.
 
 ## Remote testing authorization
 
-Use this section to summarize the written engagement scope. No per-activity matrix is required. Record the exact remote assets and environments, the permitted methods, and any boundaries or limits. A broad authorization may cover multiple methods; preserve its actual wording and exclusions rather than narrowing it through generic template rows. Blank or `TODO` remote details mean the affected remote activity is not authorized. This does not restrict the local-only testing baseline above.
+Use this section to summarize the written engagement scope and any exceptions to the default non-production authorization above. No per-activity matrix or per-case permission is required. Identify the in-scope target and record explicit program exclusions, special limits, and stop conditions. Preserve the program's wording and exercise its full permitted breadth; do not invent narrower template-imposed restrictions. Blank or `TODO` fields do not revoke the default authorization for non-production testing of the in-scope target, but they do mean target identity, version, exclusions, and special limits still need to be checked before remote activity.
 
 - Written authorization reference and date checked: TODO
-- Authorized remote assets and deployments, including any test/staging environments or testnets: TODO
-- Remote testing methods and proof actions explicitly permitted (for example authentication/role tests, state-changing PoCs, fuzzing, callbacks, or persistence): TODO
-- Approved test identities/roles and synthetic data; boundaries they may test: TODO
-- Third-party services/providers (including RPCs/indexers), allowed calls, and applicable terms: TODO
-- Remote request, concurrency, duration, resource, and data limits: TODO
-- Permitted test window and time zone: TODO
+- In-scope target and exact version/deployment identity: TODO
+- Program-specific exclusions, methods requiring special approval, or limits beyond the default: TODO / none found after checking current rules
+- Target testnet, staging, and shared non-production environments and their setup: TODO / identify available environments
+- Provider terms, rate limits, and any service-specific restrictions for RPCs/indexers used to access target data: TODO
 - Stop conditions, cleanup, rollback, and emergency contact: TODO
-- External callback or egress destinations, if any: TODO
-- Explicitly excluded assets, methods, or impacts: TODO
+- Explicitly excluded assets, methods, or impacts: TODO / none found after checking current rules
 
-Production read-only queries require written authorization identifying the assets, query methods, identity, data boundaries, and rate limits. Do not access real user data. Production writes, transactions, and persistent state changes are prohibited. A public/shared testnet or available credential does not by itself authorize testing.
+Production read-only queries require written authorization identifying the assets, query methods, identity, data boundaries, and rate limits. Do not access real user data. Production writes, transactions, and persistent state changes are prohibited. Credentials do not expand the in-scope target or override program exclusions.
 
-If remote authorization or limits are missing, hold only the affected remote activity and continue with the local-only baseline and other clearly authorized work. Do not test against live users or retrieve or retain real user data. Use synthetic test assets and the least data and state change necessary for any authorized remote proof.
+If a program-specific restriction or limit affects one remote activity, hold only that activity and continue non-production and other permitted work. Do not test against live users or retrieve or retain real user data. Use synthetic test assets and the least data and state change needed to demonstrate impact.
 
 ## Prior work
 - Relevant audit reports, advisories, and comparable-incident research (with source/date): TODO

@@ -12,7 +12,9 @@ Use each finding author's GitHub username (account login), not their display nam
 
 **Program response:** Record `Accepted`, `Duplicate`, `Invalid/ineligible`, `Rejected`, `Needs information`, or `Awaiting acknowledgment` only when supported by program correspondence. `No feedback recorded here` means submission is recorded but no disposition appears in the dossier; `Unknown` means delivery is unverified, so the response state cannot be established; `—` means a response does not apply to a draft or not-submitted report. A local duplicate or prior-art assessment is not program feedback.
 
+**Eligibility/novelty screen:** Keep the researcher's pre-submission assessment in the dossier. Use `Pending`, `No match found`, `Possible overlap`, `Known/ineligible`, or `Unclear`. `No match found` is not a guarantee of novelty or eligibility; only program correspondence establishes a program decision.
+
 Add one row per finding and link its dossier folder. Preserve existing program or report IDs in the reference column; they are separate from the workspace ID.
 
-| Finding ID | Title | Author (GitHub username) | Finding status | Severity | Submission status | Program response | Program/report reference | Dossier |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Finding ID | Title | Author (GitHub username) | Finding status | Severity | Eligibility/novelty screen | Submission status | Program response | Program/report reference | Dossier |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |

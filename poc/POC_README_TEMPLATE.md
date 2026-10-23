@@ -6,13 +6,14 @@
 
 ## Prerequisites
 - Target version / commit: TODO
-- Authorized scope row: TODO
+- Coverage-plan case IDs: TODO
+- `SCOPE.md` default non-production authorization and any program-specific remote restrictions: TODO / not applicable for local-only cases
 - Environment and required test roles: TODO
 - Dependencies and versions: TODO
 
 ## Cases and expected results
-- Case 1: TODO
-- Control / negative case: TODO
+- For each material coverage-plan case, list its role, entry point, input/state/configuration condition, environment, expected result, and linked run ID(s): TODO
+- Control / negative case demonstrating harness reachability or guard behavior: TODO
 
 ## Setup and run
 1. TODO

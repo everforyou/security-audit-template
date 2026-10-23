@@ -20,6 +20,15 @@ For each session, list the hypothesis IDs investigated, evidence-backed disposit
 - Open questions: Engagement-specific remote authorization remains to be recorded for each real target; production writes remain prohibited.
 - Next concrete task: For an audit, fill the concise remote scope summary from the actual written authorization and continue with local-only reproduction by default.
 
+## 2026-10-22 — Coverage depth and bounty eligibility review
+- Target version checked: Not applicable; this is a reusable template project, and `target/` is not configured for an audit.
+- Work performed: Removed the three-hypothesis ceiling; added an attack-surface/condition inventory, per-hypothesis coverage ledger, harness-reachability and environment-coverage requirements, and a rule that a blocked environment does not block other authorized work. Added current program-rule and public/local duplicate checks, including explicit pending/no-match/overlap distinctions. Extended the default authorization to in-scope target forks, testnets, and test/staging deployments, subject to explicit program limits; updated PoC, evidence, finding, and report templates after removing authorization-matrix references.
+- Hypotheses investigated and disposition (IDs / evidence): None; no authorized audit target is configured.
+- Commands and results: Documentation review and `git diff --check`; no target tests run.
+- Confirmed facts: The prior workflow had an arbitrary three-candidate cap, a validation plan without a case ledger, no required public/local novelty screen, and remote non-production defaults that could block fork/testnet reproduction; template references to the removed scope matrix also remained.
+- Open questions: Target-specific bounty rules, prior art, exact test environments, and required test conditions are unknown until an engagement is configured; those checks must remain pending then.
+- Next concrete task: On an audit, capture current official program rules and exceptions, inventory all attack surfaces and available environments, seed the uncapped candidate queue, and execute every material coverage-plan case within the non-production default and program limits.
+
 ## 2026-10-13 — Template workflow review
 - Target version checked: Not applicable; `target/` is empty and `SCOPE.md` is unfilled.
 - Work performed: Reviewed the audit workflow and strengthened hypothesis quality, investigation, evidence, and disposition requirements.

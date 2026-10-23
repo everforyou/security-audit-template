@@ -1,7 +1,7 @@
 To: [Private reporting address]
 Subject: Private security report: [Concise vulnerability title]
 
-Use these values for the email headers. Copy from the greeting through the sign-off into the email body; do not attach this Markdown file.
+Use these values for the email headers. Copy from the greeting through the sign-off into the email body; do not attach this Markdown file. Adapt the report to the current program's required form, fields, proof method, and attachment rules; program instructions take precedence over this generic template. Do not include internal eligibility/duplicate notes unless the program requests them.
 
 Hello [Security Team],
 

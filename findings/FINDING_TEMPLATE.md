@@ -38,9 +38,18 @@ Copy this template to `findings/<finding-slug>/FINDING.md`. Replace the example 
 ## Suggested mitigation
 [Actionable, scoped fix and regression test idea.]
 
-## Disclosure and prior art
-- Program eligibility check: pending
-- Prior audits / duplicate check: pending
+## Program eligibility and novelty review
+- Official program rules / scope / known-issue sources and date checked: TODO
+- Exact in-scope asset and affected version: TODO
+- Eligible impact and applicable severity criteria: TODO
+- Required proof, report format, and submission instructions verified: TODO
+- Public prior-art sources/search terms, dates, results, and links: TODO
+- Same-target local comparison (`findings/`, hypotheses, prior reports/drafts) and links: TODO
+- Possible overlap and material differences in root cause, version, preconditions, or impact: TODO
+- Researcher screen: pending / no match found / possible overlap / known or ineligible / unclear
+- Recheck date before submission: TODO
+
+`No match found` is a documented search result, not proof of uniqueness or program acceptance. Record program eligibility decisions only when supported by program correspondence; keep local assessments separate from program responses.
 
 ## Submission tracking
 
