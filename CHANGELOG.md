@@ -10,6 +10,7 @@ Record notable changes to the reusable template. Target-specific audit results b
 - Replace the per-activity testing authorization matrix with a concise scope record for target identity, explicit program exclusions, special limits, and stop conditions; remove per-method and per-case permission gates.
 - Remove the arbitrary three-hypothesis cap; require a code-grounded attack-surface queue and a case-by-case validation coverage plan before closure.
 - Add linked program-eligibility and public/local duplicate screening so confirmed behavior is not mistaken for bounty-eligible novelty.
+- Clarify that `.env` supports credentials and endpoints for the whole audit workflow, including research services and audit tools as well as target test identities.
 
 ## 0.1.0 — 2026-10-15
 
