@@ -1,7 +1,7 @@
 # H-001 — [short title]
 
 ## Purpose
-- Hypothesis: `research/hypotheses.md#h-001`
+- Hypothesis: `research/hypotheses/H-001.md` (copy template for this ID)
 - Security behavior under test: TODO
 
 ## Prerequisites

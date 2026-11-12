@@ -1,54 +1,35 @@
-# Investigation hypotheses
+# Hypothesis index — one row per permanent ID
 
-Maintain a complete, prioritized queue of code-grounded candidates from the attack-surface inventory; there is no fixed number limit. Do not remove a candidate after an initial failure or environmental gap. Refine/split it, continue other available cases, and preserve any unresolved environment check. Follow `AGENTS.md`.
+This is a **compact queue** for choosing the next audit task, not a place to paste tests or long analysis. Store each H-### record, case ledger and attempt history in research/hypotheses/H-###.md, copied from [HYPOTHESIS_TEMPLATE.md](hypotheses/HYPOTHESIS_TEMPLATE.md). Keep IDs permanent; never silently drop, overwrite, or recycle a candidate. Sort rows by priority without changing IDs. Do not add speculative filler or cap genuine source-grounded candidates.
 
-| ID | Priority | Component / path | Falsifiable hypothesis | Technical status | Novelty screen | Eligibility screen | Last evidence | Next action / revisit trigger |
-|---|---|---|---|---|---|---|---|---|
-| H-001 | TODO | TODO | TODO | untested | pending | pending | None | TODO |
+| ID | Priority | Component / concise claim | Technical status | Novelty | Eligibility | Last evidence | Next action / revisit trigger |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+<!-- Add candidates here; there is no pre-existing H-001 finding. -->
 
-## Status meanings
+## Technical status
 
-- `untested` — recorded but no validation attempt has been made.
-- `investigating` — active source tracing or validation is underway.
-- `reproduced` — the predicted behavior is repeatable, but security impact is not yet established.
-- `confirmed` — a realistic, in-scope attacker path and meaningful security-boundary violation are demonstrated. This is technical confirmation only; bounty eligibility and novelty remain separate screens.
-- `disproven` — every material case in the coverage plan has evidence, and the relevant paths/preconditions show the stated failure mechanism does not violate the invariant. Record counterevidence and completed coverage below; untested cases cannot be treated as disproven.
-- `blocked` — no meaningful authorized work on the hypothesis can proceed because of a specific missing authorization, artifact, or dependency. If only one environment/case is blocked, keep the hypothesis open and mark only that coverage-plan case blocked.
-- `deferred` — unresolved and intentionally lower priority only after source tracing, a complete coverage plan, a mechanism-specific local attempt, and direct follow-ups. Record why remaining work is materially lower priority and a revisit trigger. If a test is blocked by a missing artifact, dependency, or environment, mark that case blocked and keep doing other meaningful work; do not defer the whole hypothesis. This is not disproven.
-- `out of scope` — the candidate maps to a specific written exclusion in `SCOPE.md`; cite it below. This is not a safety conclusion.
+- **untested:** captured, no validation attempt.
+- **investigating:** source tracing or tests underway.
+- **reproduced:** behavior repeats; attacker impact not yet established.
+- **confirmed:** realistic attacker path and a meaningful security-boundary violation demonstrated; does not imply bounty acceptance.
+- **disproven:** all material coverage cases support that the proposed invariant violation does not occur; failed setup or one passing test is insufficient.
+- **blocked:** no meaningful permitted investigation can proceed; case-only blockers belong in the dossier, not as an overall stop.
+- **deferred:** source trace, coverage plan, local attempt and direct follow-ups completed; unresolved but deprioritized with a specific revisit trigger.
+- **out of scope:** tied to an actual written exclusion in SCOPE.md; not a conclusion about safety.
 
-The novelty screen uses `pending`, `no match found`, `possible overlap`, `known/accepted issue`, or `unclear`. `No match found` means recorded searches found no result; it does not prove uniqueness. The separate eligibility screen uses `pending`, `eligible`, `ineligible`, or `unclear`, based on current written program rules. A known issue is not automatically ineligible, and an apparently eligible issue is not automatically novel. Reproduction does not resolve either screen; program correspondence alone records an official decision.
+Record case-specific results and exactly what they prove in the dossier. A blocked remote case never automatically blocks available local research.
 
-## Investigation records
+## Separate bounty screens
 
-Copy this record for each hypothesis. Keep attempts and prior conclusions when refining it; use linked IDs for split hypotheses.
+**Novelty:** pending / no match found / possible overlap / known or accepted issue / unclear.
 
-### H-001 — [short title]
+**Eligibility:** pending / eligible / ineligible / unclear (based on current written program rules).
 
-- **Status / priority:**
-- **Target version:**
-- **Component and code references:**
-- **Falsifiable hypothesis:**
-- **Security invariant and expected consequence:**
-- **Attacker capabilities and preconditions:**
-- **Plausible path:** entry point/action → relevant checks → sensitive operation/sink → affected asset or boundary
-- **Supporting evidence:**
-- **Counterevidence / alternative explanations:**
-- **Eligibility screen:** official source(s), date checked, eligible asset/version/impact, severity rubric, proof/report requirements, exclusions, and status (`pending`, `eligible`, `ineligible`, or `unclear`).
-- **Novelty / duplicate screen:** public sources and search terms checked; local records checked (`findings/`, other hypotheses, prior reports); possible overlap and distinguishing facts; status (`pending`, `no match found`, `possible overlap`, `known/accepted issue`, or `unclear`). A search with no result is not proof of uniqueness.
-- **Validation coverage plan:** derive the cases below from code, threat model, and deployment assumptions. Consider, where applicable, roles and permissions; entry points; empty, malformed, boundary, duplicate, or reordered inputs; initialization and lifecycle state; retries, partial failures, reentrancy/concurrency; configuration, version, and dependency behavior; and local versus deployment-specific conditions. Include each condition that could change the result; mark non-applicable cases with a reason. For remote cases, cite the relevant verified target program/engagement permission from `SCOPE.md` and applicable restrictions; once covered, do not require a separate permission entry or user approval per test. Isolated local and public-state-read cases can proceed under standing user approval and provider terms.
+Do not merge these with technical status. Search evidence belongs in research/known-issues.md and the candidate dossier. Program acceptance/duplicate decisions belong only in the finding register after correspondence.
 
-| Case | Role / entry point / boundary | Input, state, or configuration variant | Environment and exact version | Expected result / control | Case status and run ID(s) | Gap or rationale |
-|---|---|---|---|---|---|---|
-| C-01 | TODO | TODO | TODO | TODO | planned | TODO |
+## Working convention
 
-#### Attempts
-
-| Run ID | Environment / authorization reference | Case(s) and result summary | Canonical manifest path | Next action |
-|---|---|---|---|---|
-| `YYYYMMDDTHHMMSSZ-01` | TODO | TODO | `evidence/H-001/runs/<run-id>/manifest.yaml` | TODO |
-
-Case status is one of `planned`, `supports`, `counterevidence`, `inconclusive`, `blocked`, or `not applicable`. `Supports` means the observed behavior supports the proposed mechanism; it does not by itself establish impact. `Counterevidence` means a valid test reached the relevant path and weighs against the mechanism; it does not by itself disprove the hypothesis. A setup failure or unreachable harness is `inconclusive`. Keep detailed commands, tested builds, tool versions, expected/observed results, and artifact paths in each manifest. Add one row for every material attempt; never replace an older run row.
-
-- **Disposition rationale:** explain why the evidence meets the selected status; for `blocked`, `deferred`, or `out of scope`, include the missing prerequisite, revisit trigger, or exact scope exclusion.
-- **Related or split hypothesis IDs:**
+1. Inventory reachable code paths in research/architecture.md and link each material surface to an H-### file or a documented no-candidate rationale.
+2. For each new ID, add its index row, create research/hypotheses/H-###.md from the template, then create poc/H-###/ as needed.
+3. Append each attempt to the candidate dossier and its immutable evidence manifest, updating the index's **last evidence** and **next action** fields.
+4. Resume the highest-priority unresolved row using research/STATUS.md. Preserve old investigations, even when contradicted by later evidence.
