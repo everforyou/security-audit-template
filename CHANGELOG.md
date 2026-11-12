@@ -4,7 +4,17 @@ Record notable changes to the reusable template. Target-specific audit results b
 
 ## Unreleased
 
+_No entries yet._
+
+## 0.2.0 — 2026-11-12
+
 ### Changed
+- Local-first audit architecture: use a short AGENTS.md entrypoint and load only the active candidate's files instead of the full investigation history.
+- Introduce research/STATUS.md as the compact cross-session resume checkpoint; reset the reusable research/SESSION_LOG.md to an empty target-audit log, with previous template history retained in Git.
+- Split the unbounded research/hypotheses.md document into a compact permanent-ID index plus one dossier per candidate under research/hypotheses/H-###.md.
+- Simplify README and retain a dependency-free, script-assisted local workflow without mandatory CI or template-wide tooling.
+- Update links in architecture, known issues, PoC and finding/report templates to the per-candidate layout.
+- Explicitly preserve standing user audit approval, target-specific remote testing rights, and the production-write prohibition.
 - Clarify standing user approval for all otherwise-permitted AI audit work: no redundant per-case permission prompts for source research, public-state reads, local forks, fuzzing, or permitted remote tests.
 - Clarify that shared remote testnets/staging require the target owner's program/engagement grant; the template cannot authorize third-party access, and uncertainty about remote testing never blocks meaningful isolated local work.
 - Allow ordinary published public-chain read-only queries within provider terms without a blanket written-production-read requirement; continue prohibiting production writes, live-state changes, and real-fund movements.

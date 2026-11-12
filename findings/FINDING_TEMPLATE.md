@@ -24,7 +24,7 @@ Copy this template to `findings/<finding-slug>/FINDING.md`. Replace the example 
 
 ## Reproduction
 - Isolated setup and environment: TODO
-- Related hypothesis ID(s): TODO
+- Related hypothesis ID(s) and dossier links (`research/hypotheses/H-###.md`): TODO
 - PoC instructions and code: `poc/H-###/README.md` and related files
 - Run manifest(s): `evidence/H-###/runs/<run-id>/manifest.yaml`
 - Exact commands and inputs: summarize the approved reproduction steps here; the run manifest is the canonical record for the tested command, version, and environment.

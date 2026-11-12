@@ -1,52 +1,60 @@
-# [Target name] — security audit
+# [Target name] — local-first security audit
 
-A standalone Codex workspace for **one** authorized security audit. Supported targets include applications, APIs, libraries, services, infrastructure, cloud configurations, cryptographic systems, blockchain protocols, and more.
+A small, dependency-free **one-target** workspace for Codex or a human researcher. The repository is a documentation/evidence scaffold, not a scanner or a remote-testing authorization. Use the target's own development tools for builds and PoCs; no GitHub Actions or template-wide runtime is required.
 
 ## Target metadata
+
 - Project / vendor: TODO
-- First Program Launch date: TODO
-- Recent Program Launch date: TODO
-- Reward range: TODO
-- Target repository or artifact: TODO
-- Exact commit, release, image digest, or deployed version: TODO
-- Technology / deployment: TODO
-- Authorization / engagement: TODO
+- Initial and latest program launch/update: TODO / TODO
+- Bounty range and official policy: TODO
+- Source, exact commit/version, deployment/chain (if relevant): TODO
+- Technology and runtime: TODO
+- Authorization / engagement: TODO (details in [SCOPE.md](SCOPE.md))
 - Researcher: TODO
+- Template origin tag or commit: TODO
 
-## Template version and distribution
+## Local quickstart
 
-The root [`VERSION`](VERSION) file identifies this reusable template, not the audited target; the target's exact version belongs in `SCOPE.md`. Track notable template changes in [`CHANGELOG.md`](CHANGELOG.md).
+1. Complete [SCOPE.md](SCOPE.md) from the current program or engagement. Standing workspace-owner approval allows public research and isolated local tests without per-case prompts; remote active tests must also be covered by the target's actual authorization. **No production writes or real-fund movement.**
+2. Place the authorized source checkout or test artifact in target/ (ignored by Git). Pin and record the **exact** upstream commit/release, dependencies, compiler/runtime, and any deployment-specific configuration. Do not modify the baseline; create exploratory code under poc/ or scripts/.
+3. Optionally copy .env.example to .env and set only the required credentials/endpoints. .env is ignored. Never commit or echo secrets to evidence.
+4. Write the real commands below, run a local baseline, and map the attack surface in [research/architecture.md](research/architecture.md).
+5. Record code-grounded H-### candidates in [research/hypotheses.md](research/hypotheses.md). Use **one dossier per candidate** in research/hypotheses/H-###.md, with its tests in poc/H-###/ and immutable run records in evidence/H-###/runs/.
+6. For each investigation session, open [AGENTS.md](AGENTS.md), SCOPE.md, and the short [research/STATUS.md](research/STATUS.md). Load only the active candidate and relevant references; update STATUS.md and append to SESSION_LOG.md at the end.
 
-Use semantic versions in `MAJOR.MINOR.PATCH` form. While the major version is `0`, minor releases may change the workflow or file structure; patch releases contain corrections that do not change the workflow. Once the template reaches `1.0.0`, use major releases for incompatible workflow or format changes, minor releases for backward-compatible additions, and patch releases for corrections.
+## Commands (fill from the actual target)
 
-Distribute snapshots from version tags named `vMAJOR.MINOR.PATCH` and do not move a published tag. When creating a target-specific audit workspace, record the template tag or source commit in that workspace so its starting point can be identified. Do not bump the template version for changes confined to a target-specific audit workspace.
-
-## Getting started
-1. Check current program rules, bounty eligibility, target identity/version, exclusions, limits, and stop conditions in `SCOPE.md`. The workspace owner grants standing approval for all otherwise-permitted audit methods: source inspection, public-state research, isolated local/fork reproduction, role tests, fuzzing, and exploit-chain simulations. **Do not pause for per-method or per-case user permission.** Actively testing shared testnets, staging services, or other remote targets requires that the target's program or engagement authorizes the specific asset/activity; the template itself cannot grant third-party access. Public blockchain read-only queries may proceed under published provider rules. Nonpublic production access requires explicit target authorization; production writes and real-fund movements remain prohibited. If a remote activity is uncertain, continue local research instead of stopping the audit.
-2. Place a checkout or supplied test artifact under `target/` (ignored by this template's Git history).
-3. Use `.env.example` as the shared local credential and endpoint file for the whole audit workflow: research services, audit tooling, and authorized target test identities. Copy it to `.env` and fill only variables your tools use. Follow each service's terms; keep target identities specific to this engagement. Credentials do not grant permission to test a target or third-party asset. Never commit `.env` or include credential values in evidence or logs.
-4. Record actual setup/build/test commands below after inspecting the target.
-5. Open this project root in Codex and ask it to read `AGENTS.md`, `README.md`, and `SCOPE.md`.
-6. Keep hypotheses in `research/`, independently validated vulnerabilities in `findings/`, hypothesis-specific test code in `poc/H-###/`, and sanitized per-run evidence in `evidence/H-###/runs/<UTC-run-id>/`. Use `scripts/new-evidence-run.sh H-###` to prepare a unique run folder and manifest for every material attempt; link the manifest from the hypothesis record. Keep summaries concise and link to the canonical run record instead of duplicating logs. For each validated finding, create `findings/<finding-slug>/`, copy [`findings/FINDING_TEMPLATE.md`](findings/FINDING_TEMPLATE.md) there as `FINDING.md`, assign the next permanent ID in [`findings/README.md`](findings/README.md), and link the relevant hypothesis IDs, PoC instructions, and run manifests. Keep technical, submission, and program-response statuses current in the register. Maintain reusable cross-hunt methods in a separate location outside this one-target workspace; only reuse sanitized, target-independent material after checking disclosure terms.
-
-## Commands
-```sh
-# Setup: TODO
+~~~sh
+# Fetch/pin target: TODO
+# Setup/install: TODO
 # Build: TODO
 # Baseline tests: TODO
-# Local PoC: TODO
-```
+# Local reproduction: TODO
+# Optional: scripts/new-evidence-run.sh H-001
+~~~
 
-## Workspace
-- `AGENTS.md` — Codex instructions for this audit
-- `SCOPE.md` — standing workspace-owner approval, independently verified remote permissions, exact version, assets, and exclusions
-- `.env.example` — optional credential-variable names for audit tools, research services, and target test identities; keep real values in the ignored local `.env`
-- `target/` — locally obtained baseline; not committed
-- `research/` — architecture and attack-surface coverage, hypotheses, program eligibility/duplicate checks, incident-informed public research, prior work, session log
-- `findings/` — demonstrated and documented security findings; `findings/README.md` is the permanent ID, title, submission, and program-response register
-- `poc/` — isolated reproduction code and setup instructions, grouped by hypothesis ID, with target-specific shared helpers in `poc/shared/`
-- `scripts/` — auxiliary analysis scripts
-- `evidence/` — sanitized, immutable run records, manifests, traces, logs, and screenshots, grouped by hypothesis ID
-- `reports/` — copy-ready email/report template with an explicit Proof of Concept section; copy its message body into the email and attach PoC/evidence separately, not the report Markdown
+The evidence-run helper only creates a unique local manifest folder; it **does not execute a PoC** or contact an external target. See [evidence/README.md](evidence/README.md).
 
-**Confidentiality:** keep per-target audit repos private unless public release is approved; the reusable template itself can be public.
+## Where information lives
+
+| Path | Purpose |
+| --- | --- |
+| AGENTS.md | Short AI entrypoint and work loop |
+| SCOPE.md | One canonical policy, target version, environment and authorization record |
+| research/STATUS.md | Small current checkpoint for fast resume |
+| research/architecture.md | Attack-surface inventory and invariants |
+| research/hypotheses.md | Compact permanent-ID queue and current dispositions |
+| research/hypotheses/H-###.md | One detailed candidate, coverage plan, attempts and evidence links |
+| research/known-issues.md | Program exclusions, previous work, incident research and duplicate review |
+| research/SESSION_LOG.md | Concise per-audit chronological log, not the template's development log |
+| poc/H-###/ | Static source, fixtures and instructions for candidate reproduction |
+| evidence/H-###/runs/ | Sanitized immutable evidence records |
+| findings/ and reports/ | Confirmed dossiers, permanent finding register and private report templates |
+| scripts/ | Optional local-only helper scripts |
+| target/ | Ignored upstream checkout; never commit secrets or third-party source inadvertently |
+
+Keep target audit workspaces private unless publication is authorized. Do not copy confidential work between engagements.
+
+## Template provenance
+
+The root [VERSION](VERSION) and [CHANGELOG.md](CHANGELOG.md) describe the reusable template, not the target. Use immutable vMAJOR.MINOR.PATCH tags for published template snapshots and record the source tag/commit when creating an audit workspace. Version 0 minor releases may reorganize the scaffold; do not auto-migrate an existing engagement or renumber its hypothesis/finding IDs. Earlier single-file hypothesis records can remain in older target workspaces until deliberately migrated.

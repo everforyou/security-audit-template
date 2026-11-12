@@ -52,7 +52,7 @@ Use the selected internal run manifest as the source for exact versions, command
 3. [Step 3]
 
 ### PoC code or test
-[Include a minimal, self-contained code block or attach the minimal test file. Provide the path relative to this audit project, e.g., `poc/repro.test.ts`. Do not rely on private paths alone when submitting externally.]
+[Include a minimal, self-contained code block or attach the minimal test file. Provide the path relative to this audit project, e.g., `poc/H-001/repro.test.ts`. Do not rely on private paths alone when submitting externally.]
 
 ### Run command
 ```sh
