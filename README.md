@@ -22,7 +22,7 @@ Use semantic versions in `MAJOR.MINOR.PATCH` form. While the major version is `0
 Distribute snapshots from version tags named `vMAJOR.MINOR.PATCH` and do not move a published tag. When creating a target-specific audit workspace, record the template tag or source commit in that workspace so its starting point can be identified. Do not bump the template version for changes confined to a target-specific audit workspace.
 
 ## Getting started
-1. Check current program rules, bounty eligibility and proof requirements, target identity/version, exclusions, special limits, and stop conditions in `SCOPE.md`. For assets identified as in scope, the template authorizes non-production testing by default, including RPC-backed forks, public/shared target testnets, test/staging deployments, role tests, fuzzing, exploit chains, and state changes. Program exclusions and limits still govern; the default does not add assets to scope. Do not add per-method or per-case permission gates. Production writes remain prohibited; production read-only access needs explicit authorization.
+1. Check current program rules, bounty eligibility, target identity/version, exclusions, limits, and stop conditions in `SCOPE.md`. The workspace owner grants standing approval for all otherwise-permitted audit methods: source inspection, public-state research, isolated local/fork reproduction, role tests, fuzzing, and exploit-chain simulations. **Do not pause for per-method or per-case user permission.** Actively testing shared testnets, staging services, or other remote targets requires that the target's program or engagement authorizes the specific asset/activity; the template itself cannot grant third-party access. Public blockchain read-only queries may proceed under published provider rules. Nonpublic production access requires explicit target authorization; production writes and real-fund movements remain prohibited. If a remote activity is uncertain, continue local research instead of stopping the audit.
 2. Place a checkout or supplied test artifact under `target/` (ignored by this template's Git history).
 3. Use `.env.example` as the shared local credential and endpoint file for the whole audit workflow: research services, audit tooling, and authorized target test identities. Copy it to `.env` and fill only variables your tools use. Follow each service's terms; keep target identities specific to this engagement. Credentials do not grant permission to test a target or third-party asset. Never commit `.env` or include credential values in evidence or logs.
 4. Record actual setup/build/test commands below after inspecting the target.
@@ -39,7 +39,7 @@ Distribute snapshots from version tags named `vMAJOR.MINOR.PATCH` and do not mov
 
 ## Workspace
 - `AGENTS.md` — Codex instructions for this audit
-- `SCOPE.md` — rules, authorization, exact version, assets, exclusions
+- `SCOPE.md` — standing workspace-owner approval, independently verified remote permissions, exact version, assets, and exclusions
 - `.env.example` — optional credential-variable names for audit tools, research services, and target test identities; keep real values in the ignored local `.env`
 - `target/` — locally obtained baseline; not committed
 - `research/` — architecture and attack-surface coverage, hypotheses, program eligibility/duplicate checks, incident-informed public research, prior work, session log

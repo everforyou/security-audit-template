@@ -7,7 +7,7 @@
 ## Prerequisites
 - Target version / commit: TODO
 - Coverage-plan case IDs: TODO
-- `SCOPE.md` default non-production authorization and any program-specific remote restrictions: TODO / not applicable for local-only cases
+- Standing user approval for isolated local cases; actual target authorization for remote active cases, plus limits: TODO / not applicable for local-only cases
 - Environment and required test roles: TODO
 - Dependencies and versions: TODO
 
